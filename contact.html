@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Kaycee Flinn, Human Design</title>
+  <meta name="description" content="Book a discovery call with Kaycee Flinn, or send an enquiry about one-on-one work, private retreats or keynote speaking.">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Kaycee Flinn — home"><img src="assets/logo/horizontal-burgundy.svg" alt="Kaycee Flinn"></a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" aria-label="Main">
+      <a href="all-in.html">One-on-One</a>
+      <a href="retreats.html">Retreats</a>
+      <a href="speaking.html">Speaking</a>
+      <a href="index.html#about">About</a>
+      <a class="btn" href="contact.html" data-book>Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero center" id="book">
+    <div class="wrap">
+      <div class="narrow reveal">
+        <span class="icon-mark" aria-hidden="true" style="width:56px;color:var(--gold);margin:0 auto 30px"></span>
+        <span class="eyebrow">Let’s begin</span>
+        <h1>Your seat at the table is waiting</h1>
+        <p class="lead">The first step is a complimentary discovery call — a relaxed conversation about where you are, what you’re craving, and whether working together feels right.</p>
+        <div class="btn-row">
+          <!-- This button opens Kaycee's booking page once the link is added in assets/main.js -->
+          <a class="btn" href="#enquire" data-book-primary>Book a discovery call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="enquire">
+    <div class="wrap split" style="align-items:start">
+      <div class="reveal">
+        <span class="eyebrow">Send an enquiry</span>
+        <h2>Prefer to write?</h2>
+        <p class="lead">For retreats, speaking, or any question at all, send a note and Kaycee will reply personally.</p>
+        <hr class="rule">
+        <p>Usually within two business days.</p>
+      </div>
+      <form class="form reveal d1" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="company" data-enquiry>
+        <input type="hidden" name="form-name" value="enquiry">
+        <p class="hp"><label>Leave this empty <input name="company"></label></p>
+        <div class="row">
+          <label>Name <input name="name" autocomplete="name" required></label>
+          <label>Email <input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <label>I’m interested in
+          <select name="topic">
+            <option>One-on-One: ALL IN</option>
+            <option>Retreats</option>
+            <option>Speaking</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Your message <textarea name="message" required placeholder="Tell Kaycee a little about you, your group or your event…"></textarea></label>
+        <button class="btn" type="submit">Send enquiry</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/horizontal-ivory.svg" alt="Kaycee Flinn">
+        <p>Human Design guidance for high-functioning individuals and groups ready to go all in on themselves.</p>
+      </div>
+      <div>
+        <h4>Work with me</h4>
+        <ul>
+          <li><a href="all-in.html">One-on-One: ALL IN</a></li>
+          <li><a href="retreats.html">Private Retreats</a></li>
+          <li><a href="speaking.html">Keynote Speaking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="contact.html" data-book>Book a discovery call</a></li>
+          <li><a href="contact.html#enquire">Send an enquiry</a></li>
+          <li><a href="#" aria-label="Instagram (link to be added)">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Kaycee Flinn. All rights reserved.</span>
+      <span>Human Design</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
