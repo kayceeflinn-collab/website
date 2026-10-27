@@ -79,7 +79,7 @@ p { margin: 0 0 1.2em; text-wrap: pretty; }
   margin-bottom: 22px;
 }
 .on-dark .eyebrow { color: var(--gold); }
-.hero .eyebrow-sub { display: block; font-size: 10px; letter-spacing: .28em; margin: -18px 0 26px; }
+.hero .eyebrow-sub { display: block; font-size: 10px; letter-spacing: .28em; margin: -24px 0 26px; }
 em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .on-dark em.gold { color: var(--gold); }
 
