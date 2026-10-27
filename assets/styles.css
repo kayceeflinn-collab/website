@@ -41,7 +41,10 @@ html { scroll-behavior: smooth; }
 section[id] { scroll-margin-top: 70px; }
 body {
   margin: 0;
-  background: var(--cloud);
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 22%, rgba(66,15,21,.05) 45%, rgba(255,255,255,.3) 68%, rgba(66,15,21,.04) 100%),
+    linear-gradient(195deg, #f4ebda 0%, var(--beige) 45%, #ecdfc8 100%);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: clamp(17px, 1.15vw, 19px);
@@ -89,9 +92,9 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .section { padding: var(--section) 0; position: relative; }
 .center { text-align: center; }
 .center .narrow { margin-left: auto; margin-right: auto; }
-.bg-ivory { background: var(--ivory); }
-.bg-beige { background: var(--beige); }
-.bg-burgundy { background: var(--burgundy); color: var(--ivory); }
+.bg-ivory { background: linear-gradient(125deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 22%, rgba(66,15,21,.05) 45%, rgba(255,255,255,.3) 68%, rgba(66,15,21,.04) 100%), var(--ivory); }
+.bg-beige { background: linear-gradient(125deg, rgba(255,255,255,.4) 0%, rgba(255,255,255,0) 22%, rgba(66,15,21,.05) 45%, rgba(255,255,255,.3) 68%, rgba(66,15,21,.04) 100%), var(--beige); }
+.bg-burgundy { background: linear-gradient(125deg, rgba(255,255,255,.08) 0%, rgba(255,255,255,0) 22%, rgba(0,0,0,.12) 45%, rgba(255,255,255,.06) 68%, rgba(0,0,0,.1) 100%), var(--burgundy); color: var(--ivory); }
 .on-dark .lead, .bg-burgundy .lead { color: rgba(245, 242, 238, .78); }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 7vw, 110px); align-items: center; }
