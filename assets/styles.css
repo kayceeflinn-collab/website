@@ -183,7 +183,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .menu-open .menu-toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
 
 @media (max-width: 960px) {
-  .brand img { height: 26px; }
+  .brand img { height: 38px; }
   .menu-toggle { display: block; position: relative; z-index: 2; }
   .nav {
     position: fixed; inset: 0; z-index: 1;
