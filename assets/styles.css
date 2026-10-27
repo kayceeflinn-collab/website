@@ -250,7 +250,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .hero-inner { position: relative; z-index: 1; max-width: 940px; padding: 0 var(--gutter); }
 .hero .icon-mark { width: clamp(58px, 6vw, 82px); color: var(--gold); margin: 0 auto 30px; }
 .hero h1 { color: var(--burgundy); margin-bottom: 26px; }
-.hero h1 .all-in { font-family: var(--font-logo); letter-spacing: .04em; color: var(--gold-deep); white-space: nowrap; }
+.hero h1 .all-in { font-family: var(--font-logo); letter-spacing: .04em; color: var(--gold-deep); }
 .hero .lead { max-width: 660px; margin: 0 auto; }
 .scroll-cue {
   position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%);
