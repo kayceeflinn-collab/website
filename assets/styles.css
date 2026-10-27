@@ -273,6 +273,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .hero .eyebrow {
   font-family: var(--font-logo);
 }
+.hero .eyebrow:not(.eyebrow-sub) { font-weight: 700; }
 .hero .lead { max-width: 660px; margin: 0 auto; }
 .scroll-cue {
   position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%);
