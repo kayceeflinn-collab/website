@@ -336,6 +336,10 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 @media (max-width: 580px) { .cards { grid-template-columns: 1fr; } }
 .cards.three { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 900px) { .cards.three { grid-template-columns: 1fr; } }
+.cards.two { grid-template-columns: repeat(2, 1fr); max-width: 780px; margin-left: auto; margin-right: auto; }
+@media (max-width: 700px) { .cards.two { grid-template-columns: 1fr; } }
+.card .price { font-family: var(--font-logo); font-size: 34px; color: var(--gold-deep); margin: 0 0 14px; }
+.card .btn-row { margin-top: 26px; }
 .card {
   background: var(--cloud); padding: 40px 32px 36px; position: relative;
   border: 1px solid rgba(206, 176, 127, .45);
