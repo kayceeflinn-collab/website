@@ -278,7 +278,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
   font-family: var(--font-logo);
 }
 .hero .eyebrow:not(.eyebrow-sub) { font-weight: 700; }
-.hero .lead { max-width: 660px; margin: 0 auto; }
+.hero .lead { max-width: 660px; margin: 0 auto; font-size: clamp(16px, 1.15vw, 18px); text-transform: uppercase; letter-spacing: .04em; }
 .scroll-cue {
   position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%);
   width: 1px; height: 56px; background: linear-gradient(var(--gold), transparent); z-index: 1;
