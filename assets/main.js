@@ -67,7 +67,7 @@ document.querySelectorAll(".reveal, .card-fan").forEach((el) => io.observe(el));
 // Footer year
 document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 
-// Enquiry form: works out of the box on Netlify (data-netlify). Elsewhere, set the form's action.
+// Enquiry form: submits to the form's action (Formspree) via fetch, with a plain-HTML fallback if JS is off.
 const form = document.querySelector("form[data-enquiry]");
 if (form) {
   const params = new URLSearchParams(location.search);
@@ -75,16 +75,15 @@ if (form) {
   if (topic && form.topic) form.topic.value = topic;
 
   form.addEventListener("submit", async (e) => {
-    if (form.getAttribute("action")) return; // a custom action is set — let the browser submit
     e.preventDefault();
     const btn = form.querySelector("button[type=submit]");
     btn.disabled = true;
     btn.textContent = "Sending…";
     try {
-      const res = await fetch("/", {
+      const res = await fetch(form.action, {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(new FormData(form)).toString(),
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
       });
       if (!res.ok) throw new Error(res.status);
       form.innerHTML =
@@ -92,7 +91,7 @@ if (form) {
     } catch {
       btn.disabled = false;
       btn.textContent = "Send enquiry";
-      alert("Sorry — the form couldn't be sent from here. Please try again once the site is live.");
+      alert("Sorry — the form couldn't be sent. Please try again or email Kaycee directly.");
     }
   });
 }
