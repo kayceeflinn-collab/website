@@ -280,6 +280,8 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .hero .eyebrow:not(.eyebrow-sub) { font-weight: 700; }
 .hero .lead { max-width: 660px; margin: 0 auto; font-family: var(--font-logo); font-weight: 400; font-size: clamp(14px, 1vw, 15px); letter-spacing: .02em; color: var(--gold-deep); }
 .hero .btn-row { margin-top: 56px; }
+.hero .btn-row .btn.ghost { color: var(--gold-deep); border-color: var(--gold-deep); }
+.hero .btn-row .btn.ghost:hover { background: var(--gold); color: var(--burgundy); border-color: var(--gold); }
 .scroll-cue {
   position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%);
   width: 1px; height: 56px; background: linear-gradient(var(--gold), transparent); z-index: 1;
