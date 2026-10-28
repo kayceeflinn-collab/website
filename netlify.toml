@@ -1,0 +1,24 @@
+# Netlify settings — read automatically on every deploy from GitHub.
+# Plain HTML site: nothing to build, publish the repo as it is.
+[build]
+  publish = "."
+  command = ""
+
+# Keep internal files off the public site.
+[[redirects]]
+  from = "/README.md"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/.claude/*"
+  to = "/"
+  status = 301
+  force = true
