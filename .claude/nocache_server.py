@@ -1,4 +1,5 @@
 import http.server
+import os
 
 class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
@@ -6,4 +7,5 @@ class NoCacheHandler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 if __name__ == "__main__":
+    os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     http.server.test(HandlerClass=NoCacheHandler, port=8080)
