@@ -4,7 +4,7 @@
 const SITE = {
   // Paste Kaycee's booking link here (Calendly, Acuity, etc.).
   // While it's empty, every "Book a call" button goes to the contact page.
-  bookingUrl: "https://calendly.com/kayceeflinn/all-in-with-kaycee",
+  bookingUrl: "",
 };
 
 /* ========================================================================== */
