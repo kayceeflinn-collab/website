@@ -198,7 +198,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .menu-open .menu-toggle span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
 .menu-open .menu-toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
 
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
   .brand-mark { height: 22px; }
   .brand img { height: 22px; }
   .menu-toggle { display: block; position: relative; z-index: 2; }
