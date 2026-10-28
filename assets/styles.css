@@ -14,17 +14,18 @@
   font-display: swap;
 }
 
+
 :root {
   /* Brand palette */
-  --burgundy: #420f15;
-  --burgundy-soft: #5a1a21;
+  --burgundy: #85683a;
+  --burgundy-soft: #a08750;
   --cloud: #fefdfc;
   --ivory: #f5f2ee;
   --beige: #e7dccd;
   --gold: #ceb07f;
   --gold-deep: #85683a; /* darker gold for text on light grounds (contrast) */
-  --ink: #24201d;       /* Grey Brown */
-  --ink-soft: #5b524b;
+  --ink: #85683a;       /* gold, used for all default body text */
+  --ink-soft: #9c8554;
 
   --font-display: "Qariga", "Cormorant Garamond", Georgia, serif;
   --font-logo: "Triklen Care", "Cormorant Garamond", Georgia, serif;
@@ -107,10 +108,12 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 /* ---------- Ornaments ---------- */
 .ornament { display: flex; align-items: center; justify-content: center; gap: 18px; color: var(--gold); margin: 0 auto 30px; }
 .ornament::before, .ornament::after { content: ""; height: 1px; width: 64px; background: currentColor; opacity: .7; }
+.ornament-wide::before, .ornament-wide::after { width: 140px; }
 .ornament img, .ornament svg { width: 26px; height: auto; }
 .ornament-full { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; gap: 0; }
 .ornament-full::before, .ornament-full::after { width: 50%; }
 #work-with-me .eyebrow { font-size: 20px; }
+#about .eyebrow { font-size: 26px; letter-spacing: .2em; }
 .rule { width: 72px; height: 1px; background: var(--gold); border: 0; margin: 28px 0; }
 .center .rule { margin-left: auto; margin-right: auto; }
 
@@ -180,10 +183,12 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 }
 .brand-tagline { font-family: var(--font-body); font-size: 10px; letter-spacing: .34em; text-transform: uppercase; color: inherit; }
 .brand img { display: block; height: 62px; width: auto; }
-.nav { grid-column: 1; justify-self: start; display: flex; align-items: center; gap: clamp(14px, 2vw, 30px); }
+.nav { grid-column: 1; justify-self: start; display: flex; align-items: center; gap: clamp(8px, 1.4vw, 24px); }
 .nav a {
-  font-size: 12.5px; letter-spacing: .24em; text-transform: uppercase;
+  font-size: 13px; letter-spacing: .26em; text-transform: uppercase;
+  font-weight: 400;
   text-decoration: none; color: var(--ink); position: relative; padding: 6px 0;
+  white-space: nowrap;
 }
 .nav a:not(.btn)::after {
   content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px;
@@ -193,7 +198,8 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .nav .btn { padding: 13px 22px; font-size: 11.5px; color: var(--ivory); }
 .nav .btn:hover { color: var(--burgundy); }
 .nav-btn-mobile { display: none; }
-.header-cta { grid-column: 3; justify-self: end; padding: 13px 22px; font-size: 11.5px; }
+.header-cta { grid-column: 3; justify-self: end; margin-right: 48px; padding: 13px 22px; font-size: 11.5px; background: transparent; border-color: var(--gold-deep); color: var(--gold-deep); }
+.header-cta:hover { background: var(--gold-deep); color: var(--ivory); }
 .menu-toggle {
   display: none; grid-column: 3; justify-self: end; background: none; border: 0; padding: 10px; margin-right: -10px; cursor: pointer; color: var(--burgundy);
 }
@@ -201,7 +207,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .menu-open .menu-toggle span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
 .menu-open .menu-toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
 
-@media (max-width: 1080px) {
+@media (max-width: 880px) {
   .brand-mark { height: 46px; }
   .brand img { height: 46px; }
   .menu-toggle { display: block; position: relative; z-index: 2; }
@@ -281,7 +287,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
   font-family: var(--font-logo);
 }
 .hero .eyebrow:not(.eyebrow-sub) { font-weight: 700; }
-.hero .lead { max-width: 660px; margin: 0 auto; font-family: var(--font-logo); font-weight: 400; font-size: clamp(14px, 1vw, 15px); letter-spacing: .02em; color: var(--gold-deep); }
+.hero .lead { max-width: 660px; margin: 0 auto; font-family: "Bodoni Moda", "Cormorant Garamond", Georgia, serif; font-style: italic; font-weight: 400; font-size: clamp(16px, 1.2vw, 19px); letter-spacing: .01em; color: var(--gold-deep); }
 .hero .btn-row { margin-top: 56px; }
 .hero .btn-row .btn.ghost { color: var(--gold-deep); border-color: var(--gold-deep); }
 .hero .btn-row .btn.ghost:hover { background: var(--gold); color: var(--burgundy); border-color: var(--gold); }
@@ -322,6 +328,8 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
   font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-soft);
   margin-top: 30px;
 }
+#about p:not(.credentials) { font-size: clamp(19px, 1.5vw, 23px); line-height: 1.6; color: #4a3b22; font-weight: 300; text-transform: none; letter-spacing: normal; }
+#about h2, #about .credentials { color: #4a3b22; }
 
 /* ---------- Pain points ---------- */
 .feel-list { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 0; }
@@ -351,13 +359,13 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .card .price { font-family: var(--font-logo); font-size: 34px; color: var(--gold-deep); margin: 0 0 14px; }
 .card .btn-row { margin-top: 26px; }
 .card {
-  background: var(--cloud); padding: 40px 32px 36px; position: relative;
+  background: var(--cloud); padding: 26px 32px 28px; position: relative;
   border: 1px solid rgba(206, 176, 127, .45);
   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
 }
 .card:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -30px rgba(66, 15, 21, .35); }
 .card .num { font-family: var(--font-logo); font-size: 15px; letter-spacing: .2em; color: var(--gold-deep); display: block; margin-bottom: 18px; }
-.card h3 { color: var(--burgundy); }
+.card h3 { color: var(--burgundy); text-transform: uppercase; margin-top: 0; }
 .card p { margin: 0; color: var(--ink-soft); }
 
 /* ---------- Playing cards (x-ray section) ---------- */
@@ -414,16 +422,12 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .offer-body .text-link { align-self: flex-start; }
 
 /* ---------- Steps ---------- */
-.steps { counter-reset: step; display: grid; gap: 0; margin-top: 50px; }
+.steps { display: grid; gap: 0; margin-top: 50px; }
 .step {
-  display: grid; grid-template-columns: 90px 1fr; gap: 26px; padding: 34px 0;
+  padding: 34px 0;
   border-top: 1px solid rgba(66, 15, 21, .14);
 }
 .step:last-child { border-bottom: 1px solid rgba(66, 15, 21, .14); }
-.step::before {
-  counter-increment: step; content: counter(step, upper-roman);
-  font-family: var(--font-logo); font-size: 34px; color: var(--gold-deep); line-height: 1.1;
-}
 .step h3 { color: var(--burgundy); margin-bottom: .35em; }
 .step p { margin: 0; color: var(--ink-soft); }
 .bg-burgundy .step { border-color: rgba(206, 176, 127, .25); }
@@ -440,6 +444,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
   background: var(--gold);
   -webkit-mask: url("logo/icon.svg") center / contain no-repeat; mask: url("logo/icon.svg") center / contain no-repeat;
 }
+#for-you-if .checks li::before { background: #4a3b22; }
 
 /* ---------- Topics (speaking) ---------- */
 .topics { display: grid; gap: 22px; margin-top: 56px; }
@@ -464,6 +469,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .faq summary {
   list-style: none; cursor: pointer; padding: 28px 50px 28px 0; position: relative;
   font-family: var(--font-display); font-size: clamp(21px, 1.9vw, 26px); color: var(--burgundy);
+  text-transform: uppercase;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
@@ -509,11 +515,11 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .hp { position: absolute; left: -9999px; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--ink); color: rgba(245, 242, 238, .72); padding: 90px 0 40px; font-size: 15px; }
+.site-footer { background: var(--ink); color: rgba(245, 242, 238, .72); padding: 50px 0 40px; font-size: 15px; }
 .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 50px; align-items: start; }
 @media (max-width: 820px) { .footer-top { grid-template-columns: 1fr; gap: 40px; } }
 .footer-brand img { height: 34px; width: auto; }
-.footer-brand p { margin: 24px 0 0; max-width: 340px; }
+.footer-brand p { margin: 6px 0 0; max-width: 340px; }
 .site-footer h4 { font-weight: 400; font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); margin: 0 0 18px; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .site-footer a { text-decoration: none; transition: color .3s; }

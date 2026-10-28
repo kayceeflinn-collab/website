@@ -60,7 +60,7 @@ const io = new IntersectionObserver(
         io.unobserve(e.target);
       }
     }),
-  { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }
+  { threshold: 0, rootMargin: "0px 0px -40px 0px" }
 );
 document.querySelectorAll(".reveal, .card-fan").forEach((el) => io.observe(el));
 
