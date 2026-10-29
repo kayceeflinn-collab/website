@@ -106,8 +106,8 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 }
 
 /* ---------- Ornaments ---------- */
-.ornament { display: flex; align-items: center; justify-content: center; gap: 18px; color: var(--gold); margin: 0 auto 30px; }
-.ornament::before, .ornament::after { content: ""; height: 1px; width: 64px; background: currentColor; opacity: .7; }
+.ornament { display: flex; align-items: center; justify-content: center; gap: 18px; color: var(--gold-deep); margin: 0 auto 30px; }
+.ornament::before, .ornament::after { content: ""; height: 1px; width: 140px; background: currentColor; opacity: .7; }
 .ornament-wide::before, .ornament-wide::after { width: 140px; }
 .ornament img, .ornament svg { width: 26px; height: auto; }
 .ornament-full { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; gap: 0; }
@@ -174,6 +174,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .brand-mark {
   display: block;
   height: 62px; width: auto; aspect-ratio: 1355.1 / 263.7;
+  margin-top: 6px;
   background: currentColor;
   -webkit-mask: url("logo/horizontal.svg") center / contain no-repeat;
           mask: url("logo/horizontal.svg") center / contain no-repeat;
