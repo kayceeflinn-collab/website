@@ -42,7 +42,7 @@ if (toggle) {
     const open = document.body.classList.toggle("menu-open");
     toggle.setAttribute("aria-expanded", open);
   });
-  document.querySelectorAll(".nav a").forEach((a) =>
+  document.querySelectorAll(".mobile-nav a").forEach((a) =>
     a.addEventListener("click", () => {
       document.body.classList.remove("menu-open");
       toggle.setAttribute("aria-expanded", "false");
