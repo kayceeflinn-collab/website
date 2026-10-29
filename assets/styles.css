@@ -110,6 +110,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .ornament::before, .ornament::after { content: ""; height: 1px; width: 140px; background: currentColor; opacity: .7; }
 .ornament-wide::before, .ornament-wide::after { width: 140px; }
 .ornament img, .ornament svg { width: 26px; height: auto; }
+.ornament .icon-mark { margin-left: 0; margin-right: 0; }
 .ornament-full { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; gap: 0; }
 .ornament-full::before, .ornament-full::after { width: 50%; }
 #work-with-me .eyebrow { font-size: 20px; }
@@ -174,7 +175,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .brand-mark {
   display: block;
   height: 62px; width: auto; aspect-ratio: 1355.1 / 263.7;
-  margin-top: 6px;
+  margin-top: 0px;
   background: currentColor;
   -webkit-mask: url("logo/horizontal.svg") center / contain no-repeat;
           mask: url("logo/horizontal.svg") center / contain no-repeat;
@@ -449,14 +450,14 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 #for-you-if .checks li::before { background: #4a3b22; }
 
 /* ---------- Topics (speaking) ---------- */
-.topics { display: grid; gap: 22px; margin-top: 56px; }
+.topics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 56px; }
 .topic {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 40px;
+  display: flex; flex-direction: column; gap: 18px;
   padding: 44px; background: var(--cloud); border: 1px solid rgba(206, 176, 127, .5);
 }
-.topic h3 { color: var(--burgundy); margin: 0; }
+.topic h3 { color: var(--burgundy); margin: 0; text-transform: uppercase; }
 .topic p { margin: 0; color: var(--ink-soft); }
-@media (max-width: 760px) { .topic { grid-template-columns: 1fr; gap: 14px; padding: 32px 26px; } }
+@media (max-width: 900px) { .topics { grid-template-columns: 1fr; } }
 
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; justify-content: center; }
 .chip {
@@ -495,6 +496,8 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .final-cta .wrap { position: relative; }
 .final-cta h2 { color: var(--ivory); max-width: 860px; margin: 0 auto 22px; }
 .final-cta .icon-mark { width: 54px; color: var(--gold); margin: 0 auto 34px; }
+.final-cta .ornament { color: var(--gold); }
+.final-cta .ornament .icon-mark { margin-left: 0; margin-right: 0; }
 .final-cta .lead { max-width: 600px; margin: 0 auto; }
 .final-cta .btn-row { justify-content: center; }
 
