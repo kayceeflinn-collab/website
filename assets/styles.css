@@ -222,7 +222,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
     text-decoration: none; color: var(--ink);
   }
   .menu-open .mobile-nav { opacity: 1; visibility: visible; }
-  .menu-open { overflow: hidden; }
+  .menu-open { position: fixed; left: 0; right: 0; overflow: hidden; width: 100%; }
   .brand-mark { height: 46px; }
   .brand img { height: 46px; }
 }
@@ -407,7 +407,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .card-fan.is-visible .pcard:nth-child(3) { transform: rotate(18deg) translateX(30px); }
 
 /* ---------- Offer cards ---------- */
-.offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 60px; }
+.offers { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 60px; align-items: start; }
 @media (max-width: 960px) { .offers { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; } }
 .offer {
   display: flex; flex-direction: column; text-decoration: none; color: inherit;

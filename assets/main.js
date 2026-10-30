@@ -38,15 +38,25 @@ window.addEventListener("scroll", onScroll, { passive: true });
 // Mobile menu
 const toggle = document.querySelector(".menu-toggle");
 if (toggle) {
+  let lockedScrollY = 0;
+  const openMenu = () => {
+    lockedScrollY = window.scrollY;
+    document.body.style.top = `-${lockedScrollY}px`;
+    document.body.classList.add("menu-open");
+    toggle.setAttribute("aria-expanded", "true");
+  };
+  const closeMenu = () => {
+    document.body.classList.remove("menu-open");
+    document.body.style.top = "";
+    window.scrollTo(0, lockedScrollY);
+    toggle.setAttribute("aria-expanded", "false");
+  };
   toggle.addEventListener("click", () => {
-    const open = document.body.classList.toggle("menu-open");
-    toggle.setAttribute("aria-expanded", open);
+    if (document.body.classList.contains("menu-open")) closeMenu();
+    else openMenu();
   });
   document.querySelectorAll(".mobile-nav a").forEach((a) =>
-    a.addEventListener("click", () => {
-      document.body.classList.remove("menu-open");
-      toggle.setAttribute("aria-expanded", "false");
-    })
+    a.addEventListener("click", closeMenu)
   );
 }
 
