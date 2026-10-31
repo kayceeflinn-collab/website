@@ -116,13 +116,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .ornament::before, .ornament::after { content: ""; height: 1px; width: 140px; background: currentColor; opacity: .7; }
 .ornament-wide::before, .ornament-wide::after { width: 140px; }
 .ornament img, .ornament svg { width: 26px; height: auto; }
-.ornament .icon-mark { margin-left: 0; margin-right: 0; position: relative; }
-.ornament .icon-mark::before, .ornament .icon-mark::after {
-  content: ""; position: absolute; left: 50%; width: 1px; height: 24px;
-  transform: translateX(-50%);
-}
-.ornament .icon-mark::before { bottom: 100%; background: linear-gradient(to bottom, transparent, currentColor); }
-.ornament .icon-mark::after { top: 100%; background: linear-gradient(to bottom, currentColor, transparent); }
+.ornament .icon-mark { margin-left: 0; margin-right: 0; }
 .ornament-full { width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; gap: 0; }
 .ornament-full::before, .ornament-full::after { width: 50%; }
 #work-with-me .eyebrow { font-size: 20px; }
@@ -133,11 +127,20 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 /* Icon from the logo system, recoloured via CSS mask */
 .icon-mark {
   display: inline-block;
+  position: relative;
   width: 32px; aspect-ratio: 820 / 890;
   background: currentColor;
   -webkit-mask: url("logo/icon.svg") center / contain no-repeat;
           mask: url("logo/icon.svg") center / contain no-repeat;
 }
+.icon-mark::before, .icon-mark::after {
+  content: ""; position: absolute; left: 50%; width: 1px; height: 48px;
+  transform: translateX(-50%);
+}
+.icon-mark::before { bottom: 100%; background: linear-gradient(to bottom, transparent, currentColor); }
+.icon-mark::after { top: 100%; background: linear-gradient(to bottom, currentColor, transparent); }
+.pcard .icon-mark::before, .pcard .icon-mark::after,
+.feel-list .icon-mark::before, .feel-list .icon-mark::after { content: none; }
 
 /* ---------- Buttons ---------- */
 .btn {
