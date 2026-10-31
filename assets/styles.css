@@ -377,6 +377,7 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
   background: var(--cloud); padding: 26px 32px 28px; position: relative;
   border: 1px solid rgba(206, 176, 127, .45);
   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
+  min-width: 0;
 }
 .card:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -30px rgba(66, 15, 21, .35); }
 .card .num { font-family: var(--font-logo); font-size: 15px; letter-spacing: .2em; color: var(--gold-deep); display: block; margin-bottom: 18px; }
@@ -505,6 +506,11 @@ em.gold, .gold-text { color: var(--gold-deep); font-style: normal; }
 .final-cta::before {
   content: ""; position: absolute; inset: 0;
   background: radial-gradient(ellipse 50% 60% at 50% 0%, rgba(206, 176, 127, .28), transparent 70%);
+}
+.final-cta::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 80px;
+  background: linear-gradient(to bottom, var(--beige), transparent);
+  pointer-events: none;
 }
 .final-cta .wrap { position: relative; }
 .final-cta h2 { color: var(--ivory); max-width: 860px; margin: 0 auto 22px; }
